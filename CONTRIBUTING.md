@@ -1,10 +1,10 @@
 # How to Contribute
 
-Already a JS/Vue.js developer? Pick an issue, push a PR and instantly become a member of the vue-storefront contributors community. We've marked some issues as `Easy first pick` to make it easier for newcomers to begin!
+Already a JavaScript/Vue.js developer? Pick an issue, create a pull request and instantly become a member of the vue-storefront contributors community. We've marked some issues as `Easy first pick` to make it easier for newcomers to begin!
 
 Thank you for your interest in, and engagement!
 
-Before you type an issue please read about out [release lifecycle](https://docs.vuestorefront.io/guide/basics/project-structure.html)
+Before you submit an issue please read about our [release lifecycle](docs/guide/basics/release-cycle.md).
 
 ## Branches
 
@@ -31,15 +31,15 @@ If the issue is about some changes with a particular theme, please prefix the is
 
 ## TypeScript
 
-We're introducing TypeScript to Vue Storefront core, so you can use it where it's appropriate - but please be pragmatic. Would be nice to TS features only in new modules and Vuex.
-Here are some thoughts on how to use TS features in Vue Storefront: [TypeScript Action Plan](typescript.md).
+We're introducing TypeScript to Vue Storefront core, so you can use it where it's appropriate - but please be pragmatic. Would be nice to TypeScript features only in new modules and Vuex.
+Here are some thoughts on how to use TypeScript features in Vue Storefront: [TypeScript Action Plan](typescript.md).
 
 ## Pull request checklist
 
-Here’s how to submit a pull request. **Pull request that don't meet these requirements will not be merged**.
+Here’s how to submit a pull request. **Pull requests not meeting these requirements won't get merged.**.
 
 ::: warning
-**ALWAYS** use [Pull Request template](https://github.com/DivanteLtd/vue-storefront/blob/master/PULL_REQUEST_TEMPLATE.md), it's automatically added to each PR.
+**ALWAYS** use the [pull request template](.github/PULL_REQUEST_TEMPLATE.md), it's automatically added to each pull request.
 :::
 
 1. Fork the repository and clone it locally from the `develop` branch. Make sure it's up to date with current `develop` branch.
@@ -48,17 +48,17 @@ Here’s how to submit a pull request. **Pull request that don't meet these requ
 - `bugfix/task-title`
 - `feature/task-name`
 
-3. Use Pull Request template and fill as much fields as possible to describe your solution.
-4. Reference any relevant issues or supporting documentation in your PR (ex. “Issue: 39. Issue title.”).
-5. If you are adding a new feature, please provide documentation along with the PR. Also, add it to [upgrade notes](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Upgrade%20notes.md)
-6. If you are removing/renaming something or changing its behavior, please also include it in [upgrade notes](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Upgrade%20notes.md)
+3. Use pull request template and fill as much fields as possible to describe your solution.
+4. Reference any relevant issues or supporting documentation in your pull request (ex. "Issue: 39. Issue title.").
+5. If you are adding a new feature, please provide documentation along with the pull request. Also, add it to [upgrade notes](docs/guide/upgrade-notes/README.md).
+6. If you are removing/renaming something or changing its behavior, please also include it in [upgrade notes](docs/guide/upgrade-notes/README.md).
 7. Test your changes! Run your changes against any existing tests and create new ones when needed. Make sure your changes don’t break the existing project. Make sure that your branch is passing Travis CI build.
 8. If you have found a potential security vulnerability, please _do not_ report it on the public issue tracker. Instead, send it to us at [contributors@vuestorefront.io](mailto:contributors@vuestorefront.io). We will work with you to verify and fix it as soon as possible.
-(https://github.com/DivanteLtd/vue-storefront/blob/master/README.md#documentation--table-of-contents))
+([README.md#documentation--table-of-contents](README.md#documentation--table-of-contents))
 
 ## Acceptance criteria
 
 Your pull request will be merged after meeting following criteria:
-- Everything from "Pull Request Checklist"
-- PR is proposed to appropiate branch 
+- Everything mentioned in [Pull request checklist](#pull-request-checklist)
+- Pull request is proposed to appropriate branch 
 - There are at least two approvals from core team members

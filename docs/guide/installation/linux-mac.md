@@ -14,9 +14,9 @@ Let's go!
 - [Yarn](https://yarnpkg.com/en/docs/install) (>=1.0.0)
 - [ImageMagick](https://www.imagemagick.org/script/index.php) (to fit, resize and crop images)
 
-## User-friendly installation
+## User-friendly installation with the installer script
 
-If you're MacOS or Linux user now you're able to install with pretty nice CLI installer :)
+If you're a MacOS or Linux user you're able to install Vue Storefront with a pretty nice CLI installer :)
 
 ```bash
 git clone https://github.com/DivanteLtd/vue-storefront.git vue-storefront
@@ -25,27 +25,28 @@ yarn
 yarn installer
 ```
 
-It will take some time for installation and during the last step you will be asked some questions. First one is
+The installation will take some time and during the last step you will be asked some questions. First one is
 
 ```
 Would you like to use https://demo.vuestorefront.io as the backend?
 ```
 
-If you answer `Yes`, you will have remote backend at `https://demo.vuestorefront.io`. Otherwise, you will need to install `vue-storefront-api`.
+If you answer `Yes`, you will have remote backend at `https://demo.vuestorefront.io` (see [Using Vue Storefront demo as a backend](#using-vue-storefront-demo-as-a-backend)). Otherwise, you will need to install `vue-storefront-api` (see [Installing the vue-storefront-api locally](#installing-the-vue-storefront-api-locally) for instructions).
 
 ### Using Vue Storefront demo as a backend
 
-In this case you don't need to run Docker and you will be asked one additional question:
+In case you decided for the demo backend, you don't need to run Docker and you will be asked one more additional question:
 
 ```
+? Would you like to use https://demo.vuestorefront.io as the backend? Yes
 ? Please provide path for images endpoint (https://demo.vuestorefront.io/img/)
 ```
 
-You can simply proceed and as a result you will have a `vue-storefront` folder inside your project root and Storefront application running on `http://localhost:3000`. All images will be also hosted at `https://demo.vuestorefront.io/img/`.
+You can simply proceed and as a result you will have a `vue-storefront` folder inside your project root and Storefront application running on `http://localhost:3000`. All product images will be hosted at `https://demo.vuestorefront.io/img/`.
 
 ### Installing the vue-storefront-api locally
 
-If you answer `No` on the previous question, please be sure the Docker is running, otherwise you might get an error. You will be asked some more questions immediately:
+If you answered `No` on the previous question, please be sure Docker is running, otherwise you might get an error. You will be asked some more questions immediately:
 
 ```
 ? Would you like to use https://demo.vuestorefront.io as the backend? No
@@ -54,7 +55,7 @@ If you answer `No` on the previous question, please be sure the Docker is runnin
 ? Choose path for images endpoint http://localhost:8080/img/
 ```
 
-As for images endpoint: you can choose between `https://demo.vuestorefront.io/img/` again or host your images on localhost.
+As for images endpoint: you can choose `https://demo.vuestorefront.io/img/` or host your images on localhost.
 
 After you answered all the questions, the installation process will start (it might take some time to install all dependencies). When it's finished, you will get the following message:
 

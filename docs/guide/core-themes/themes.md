@@ -19,7 +19,7 @@ To do so:
 1. Copy the `default` folder located in `src/themes` and change its name to your new theme's name.
 1. Change the `name` property in your theme's `package.json` file.
 1. Insert this name in the `theme` property of your config file in `config/local.json`.
-1. Run `yarn install` so lerna can detect a new theme.
+1. Run `yarn install` so [lerna](https://github.com/lerna/lerna#readme) can detect the new theme.
 1. Start developing your own theme for Vue Storefront!
 
 Only official themes tested and accepted by the community should be in a `master` branch. Please develop your own themes on separate branches and keep them updated with `master` to be sure it works with the newest core.

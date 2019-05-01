@@ -204,15 +204,15 @@ Vue Storefront caches all the data entities got from `vue-storefront-api` into i
 
 In such a case we're using a strategy called `twoStageCaching` which works like it executes two parallel server requests at once to get the required product, category or attribute feeds. The first request is with the limited fields and the second is for full records. Only the second request is cached **but\*\*** the first (which typically ends-up faster) is used for displaying the Category or Product page.
 
-Please take a look at the [core/modules/catalog/store/category](https://github.com/DivanteLtd/vue-storefront/tree/master/core/modules/catalog/store/category) for the reference.
+Please take a look at [core/modules/catalog/store/category](https://github.com/DivanteLtd/vue-storefront/tree/master/core/modules/catalog/store/category) for the reference.
 
 ```json
   "optimizeShoppingCart": true,
 ```
 
-Vue Storefront product objects can be quite large ones. They consist of `configurable_children`, `media_gallery` and other information. Quite significant for rendering the Product and Category pages but not so useful in the Shopping cart. To limit the shopping cart size (as it's transferred to the server while making an order) this option is being used.
+Vue Storefront product objects can be quite large ones. They consist of `configurable_children`, `media_gallery` and other information. Quite significant for rendering the product and category pages but not so useful in the shopping cart. To limit the shopping cart size (as it's transferred to the server while making an order) this option is being used.
 
-Please take a look at the [core/modules/cart](https://github.com/DivanteLtd/vue-storefront/tree/master/core/modules/cart).
+Please take a look at [core/modules/cart](https://github.com/DivanteLtd/vue-storefront/tree/master/core/modules/cart).
 
 ```json
   "category": {

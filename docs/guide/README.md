@@ -42,7 +42,7 @@ There are 3 concepts you need to be familiar with while working with Vue Storefr
 
 To summarize: Your shop is basically a Vue storefront theme that uses features provided by modules. Vue Storefront core glues it all together
 
-Knowing this three concepts allows you to confidentially work with Vue Storefront and make your own shops.
+Knowing these three concepts allows you to confidentially work with Vue Storefront and make your own shops.
 
 Useful materials: [Vue Storefront project structure](https://docs.vuestorefront.io/guide/basics/project-structure.html)
 
@@ -52,34 +52,33 @@ When you want to play with Vue Storefront there are 3 options:
 - you can set up frontend with your own `vue-storefront-api` and database dumped from demo
 - you can set up frontend with `vue-storefront-api` connected to your eCommerce backend
 
-To do any of this simply type `yarn installer` in the root of the project and answer the questions in the console. Once the installation is done type yarn dev to run your project (by default of port 3000). No matter what option you choose you can change the settings in the config file later.
+To do any of this simply type `yarn installer` in the root of the project and answer the questions in the console. Once the installation is done type `yarn dev` to run your project (by default on port 3000). No matter what option you choose you can change the settings in the [config file](#vue-storefront-config-file) later.
 
 ## Vue Storefront config file
-Most of the Vue Storefront configuration (like the active theme, backend API addresses, multistore setup etc) is done through its config file that can be found under `config` folder. The `default.json` file contains all the default setup. 
+Most of the Vue Storefront configuration (like the active theme, backend API addresses, multistore setup etc) is done through its config file that can be found in `config` folder. The `default.json` file contains all the default setup. 
 
-For your own implementation, you should create a `local.json` file in the same directory and include fields from `default.json` that you want to override. This two files will be merged in favour of `local.json` during a build process. If you will use the installer to set up your Vue Storefront instance it'll generate proper config files.
+For your own implementation, you should create a `local.json` file in the same directory and include fields from `default.json` that you want to override. These two files will be merged, in favour of `local.json`, during the build process. [The installer](#installing-vue-storefront) automatically creates `local.json` for you, to properly setup your Vue Storefront instance.
 
 ## Building themes in Vue Storefront
 
 While making themes in Vue Storefront in most cases all you need to take care of is creating your own HTML and CSS markup. All required business logic is exposed by the core with its core modules and can be easily injected into any of the theme components.
 The mechanism of injecting core business logic into themes is very simple. We are using Vue.js mixins to keep upgradable business logic in the core. 
 
-Business logic from core component can be easily injected into any theme component as a Vue.js mixin. We can easily inject it into any of our theme components just by importing it and adding it as a mixin ( eg `mixins: [Microcart]` is what you need to use core Microcart logic). This is all you need to make use of core business logic inside your theme. With this approach, we can easily ship updates to all core components without breaking your shop.
+Business logic from core components can be easily injected into any theme component as a Vue.js mixin. We can easily inject it into any of our theme components just by importing it and adding it as a mixin ( eg `mixins: [Microcart]` is what you need to use core Microcart logic). This is all you need to make use of core business logic inside your theme. With this approach, we can easily ship updates to all core components without breaking your shop.
 
-The easiest way to create your own theme is to create a copy of the default one, change it's name in it's `package.json` file, change active theme in `config/local.json` and run `yarn` to make lerna linking (which we are using for monorepos).
+Find out how easy it is to create your own theme in chapter [Creating your own themes](core-themes/themes.md#creating-your-own-themes).
 
 ## Offline mode and cache
 
 Vue Storefront is still working even while a user is offline.
 
 We managed to do this by making heavy use of the browser cache. 
-For the static assets (only prod) we are using the sw-precache plugin (config can be found in `core/build/webpack.prod.sw.config.js` ). They are cached in Service Worker and can be inspected under `Application/Cache Storage` tab of your Developer Tools.
+For the static assets (only in production mode!) we are using the [sw-precache plugin](https://github.com/goldhand/sw-precache-webpack-plugin#readme) (config can be found in `core/build/webpack.prod.sw.config.ts`). They are cached in Service Worker and can be inspected in your browser's developer tools (for example `Application/Cache Storage` in Chrome or `Storage/Cache Storage` in Firefox).
 
 :::warning
 Please mind that Service Worker is working only on production mode. 
 :::
 
-For the catalog and store data cache, we are using IndexedDB and Local Storage. We are also prefetching products from visited categories so once you enter one, all of it's products are available offline. The mechanism of offline storage is located under `core/store/lib/storage.ts`.
+For the catalog and store data cache, we are using IndexedDB and Local Storage. We are also pre-fetching products from visited categories so once you enter one, all of its products are available offline. The mechanism of offline storage is located under `core/store/lib/storage.ts`.
 
 We are using some cached data even while the user is online to display the content instantly. This is why Vue Storefront is so fast.
-
