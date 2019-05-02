@@ -52,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The "Apply button was too big, I have reduced its size - @idodidodi (#2807)
 - Added return to shopping button on ThenkYou page - @ZeevGerstner (#2818)
 - Added optional attributes to catalog/product.ts - @ZeevGerstner (#2792)
+- Fixed listening to "application-after-init" event in example module sample-custom-entity-graphql - @phoenixdev-kl
 
 ## [1.9.0] - UNRELEASED
 
