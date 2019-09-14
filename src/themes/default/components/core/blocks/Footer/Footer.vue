@@ -184,7 +184,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-secondary: color(secondary);
 
@@ -209,7 +209,7 @@ $color-secondary: color(secondary);
   flex-direction: column-reverse;
   align-items: flex-end;
 
-  @media (min-width: 768px) {
+  @include media('>=sm') {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
@@ -217,7 +217,7 @@ $color-secondary: color(secondary);
 }
 
 .bottom-links {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     padding: 0;
   }
 }
@@ -226,7 +226,7 @@ $color-secondary: color(secondary);
   display: flex;
   color: $color-secondary;
   font-size: 0.7rem;
-  @media (min-width: 768px) {
+  @include media('>=sm') {
     margin-right: 1rem;
     font-size: 0.8rem;
   }
@@ -242,14 +242,14 @@ $color-secondary: color(secondary);
 }
 .legal-entity-link {
   text-align: center;
-  @media (min-width: 768px) {
+  @include media('>=sm') {
     display: none;
   }
 }
 
 .privacy-policy-link {
   text-align: right;
-  @media (min-width: 768px) {
+  @include media('>=sm') {
     display: none;
   }
 }

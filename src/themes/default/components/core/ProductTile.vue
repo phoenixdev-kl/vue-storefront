@@ -137,7 +137,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~theme/css/animations/transitions';
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 
 $bg-secondary: color(secondary, $colors-background);
@@ -146,7 +146,7 @@ $color-white: color(white);
 
 .product {
   position: relative;
-  @media (max-width: 767px) {
+  @include media('<sm') {
     padding-bottom: 10px;
   }
   &__icons {
@@ -163,7 +163,7 @@ $color-white: color(white);
     opacity: 0;
     z-index: 2;
     transition: 0.3s opacity $motion-main;
-    @media (max-width: 767px) {
+    @include media('<sm') {
       opacity: 1;
     }
     &--active {
@@ -201,7 +201,7 @@ $color-white: color(white);
   max-height: 300px;
   &__thumb {
     padding-bottom: calc(143.88% / (164.5 / 100));
-    @media screen and (min-width: 768px) {
+    @include media('screen', '>=sm') {
       padding-bottom: calc(300% / (276.5 / 100));
     }
     opacity: 0.8;

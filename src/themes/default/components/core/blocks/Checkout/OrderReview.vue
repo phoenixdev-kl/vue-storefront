@@ -152,13 +152,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .link {
-    text-decoration: underline;
-  }
+@import '~theme/css/variables/media-queries';
 
-  .cartsummary-wrapper {
-    @media (min-width: 767px) {
-      display: none;
-    }
+.link {
+  text-decoration: underline;
+}
+
+.cartsummary-wrapper {
+  @include media('>=sm') {
+    display: none;
   }
+}
 </style>

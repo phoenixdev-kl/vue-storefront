@@ -98,71 +98,73 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .offer-container {
-    &:last-child {
-      padding-bottom: 0;
-    }
+@import '~theme/css/variables/media-queries';
+
+.offer-container {
+  &:last-child {
+    padding-bottom: 0;
   }
-  .offer {
-    height: 735px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
-    transition: 0.3s all;
+}
+.offer {
+  height: 735px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: 0.3s all;
 
-    &:hover {
-      opacity: 0.9;
-    }
-
-    @media (max-width: 767px) {
-      height: 200px;
-    }
-
-    .title {
-      text-align: center;
-      margin-top: 2rem;
-      @media (max-width: 767px) {
-        background-color: rgba(255,255,255,0.4);
-        padding: 0.5rem;
-        line-height: 2.4rem;
-      }
-    }
-
-    .subtitle {
-      font-family: 'Roboto', sans-serif;
-      @media (max-width: 767px) {
-        background-color: rgba(255,255,255,0.4);
-        padding: 0.5rem;
-      }
-    }
+  &:hover {
+    opacity: 0.9;
   }
-  .offer-small {
-    height: 360px;
 
-    @media (max-width: 767px) {
-      height: 200px;
-    }
+  @include media('<sm') {
+    height: 200px;
   }
-  .offer-product {
-    height: 330px;
-    background-position: 50% 20%;
 
-    @media (max-width: 767px) {
-      height: 330px;
-    }
-  }
   .title {
-    @media (max-width: 767px) {
-      font-size: 36px;
+    text-align: center;
+    margin-top: 2rem;
+    @include media('<sm') {
+      background-color: rgba(255,255,255,0.4);
+      padding: 0.5rem;
+      line-height: 2.4rem;
     }
   }
+
   .subtitle {
-    @media (max-width: 767px) {
-      font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    @include media('<sm') {
+      background-color: rgba(255,255,255,0.4);
+      padding: 0.5rem;
     }
   }
+}
+.offer-small {
+  height: 360px;
+
+  @include media('<sm') {
+    height: 200px;
+  }
+}
+.offer-product {
+  height: 330px;
+  background-position: 50% 20%;
+
+  @include media('<sm') {
+    height: 330px;
+  }
+}
+.title {
+  @include media('<sm') {
+    font-size: 36px;
+  }
+}
+.subtitle {
+  @include media('<sm') {
+    font-size: 18px;
+  }
+}
 </style>

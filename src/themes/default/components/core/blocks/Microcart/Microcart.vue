@@ -236,114 +236,115 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "~theme/css/animations/transitions";
+@import "~theme/css/animations/transitions";
+@import '~theme/css/variables/media-queries';
 
-  .close {
+.close {
+  i {
+    opacity: 0.6;
+  }
+  &:hover,
+  &:focus {
     i {
-      opacity: 0.6;
-    }
-    &:hover,
-    &:focus {
-      i {
-        opacity: 1;
-      }
+      opacity: 1;
     }
   }
+}
 
-  .mt0 {
-    @media (max-width: 767px) {
-      margin-top: 0;
-    }
+.mt0 {
+  @include media('<sm') {
+    margin-top: 0;
   }
+}
 
-  .clearcart {
-    &-col {
-      display: flex;
-      align-self: center;
-    }
-  }
-
-  .products {
-    @media (max-width: 767px) {
-      padding: 30px 15px;
-    }
-  }
-
-  .actions {
-    @media (max-width: 767px) {
-      padding: 0 15px;
-    }
-    .link {
-      @media (max-width: 767px) {
-        display: flex;
-        justify-content: center;
-        padding: 20px 70px;
-        &.checkout {
-          margin-top: 55px;
-          padding: 0;
-        }
-      }
-    }
-  }
-
-  .summary {
-    @media (max-width: 767px) {
-      padding:  0 15px;
-      font-size: 12px;
-    }
-  }
-
-  .summary-heading {
-    @media (max-width: 767px) {
-      font-size: 18px;
-    }
-  }
-
-  .total-price-label {
-    @media (max-width: 767px) {
-      font-size: 18px;
-    }
-  }
-
-  .total-price-value {
-    @media (max-width: 767px) {
-      font-size: 24px;
-    }
-  }
-
-  .delete-button {
-    vertical-align: middle;
-  }
-
-  .coupon-wrapper {
+.clearcart {
+  &-col {
     display: flex;
+    align-self: center;
+  }
+}
 
-    .button-outline {
-      text-transform: inherit;
-      width: 50%;
+.products {
+  @include media('<sm') {
+    padding: 30px 15px;
+  }
+}
+
+.actions {
+  @include media('<sm') {
+    padding: 0 15px;
+  }
+  .link {
+    @include media('<sm') {
+      display: flex;
+      justify-content: center;
+      padding: 20px 70px;
+      &.checkout {
+        margin-top: 55px;
+        padding: 0;
+      }
     }
+  }
+}
 
-    .coupon-input {
-      margin-right: 20px;
-      width: 100%;
-    }
+.summary {
+  @include media('<sm') {
+    padding:  0 15px;
+    font-size: 12px;
+  }
+}
+
+.summary-heading {
+  @include media('<sm') {
+    font-size: 18px;
+  }
+}
+
+.total-price-label {
+  @include media('<sm') {
+    font-size: 18px;
+  }
+}
+
+.total-price-value {
+  @include media('<sm') {
+    font-size: 24px;
+  }
+}
+
+.delete-button {
+  vertical-align: middle;
+}
+
+.coupon-wrapper {
+  display: flex;
+
+  .button-outline {
+    text-transform: inherit;
+    width: 50%;
   }
 
-  .overlay {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    z-index: 0;
-    height: 100%;
-    background:rgba(0, 0, 0, 0.4);
+  .coupon-input {
+    margin-right: 20px;
+    width: 100%;
   }
+}
 
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .4s;
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }
+.overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.4);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .4s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>

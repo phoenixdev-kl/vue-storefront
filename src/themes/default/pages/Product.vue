@@ -403,7 +403,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-primary: color(primary);
 $color-tertiary: color(tertiary);
@@ -411,17 +411,8 @@ $color-secondary: color(secondary);
 $color-white: color(white);
 $bg-secondary: color(secondary, $colors-background);
 
-.product {
-  &__add-to-compare {
-    display: none;
-    @media (min-width: 767px) {
-      display: block;
-    }
-  }
-}
-
 .breadcrumbs {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     margin: 15px 0;
     padding: 15px 0 0 15px;
   }
@@ -433,49 +424,49 @@ $bg-secondary: color(secondary, $colors-background);
   padding-bottom: 15px;
 }
 .data {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     border-bottom: 1px solid $bg-secondary;
   }
 }
 
 .image {
-  @media (max-width: 1023px) {
+  @include media('<md') {
     margin-bottom: 20px;
   }
 }
 
 .product-name {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     font-size: 36px;
   }
 }
 
 .price {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     color: $color-primary;
   }
 }
 
 .variants-label {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     font-size: 14px;
   }
 }
 
 .variants-wrapper {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     padding-bottom: 30px;
   }
 
   .sizes {
-    @media (max-width: 767px) {
+    @include media('<sm') {
       width: 100%;
     }
   }
 
   .size-guide {
     height: 40px;
-    @media (max-width: 767px) {
+    @include media('<sm') {
       width: 100%;
       margin-left: 0;
     }
@@ -483,21 +474,21 @@ $bg-secondary: color(secondary, $colors-background);
 }
 
 .product-top-section {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     padding: 0;
     background-color: $color-white;
   }
 }
 
 .add-to-buttons {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     padding-top: 30px;
     margin-bottom: 40px;
   }
 }
 
 .details {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     padding: 50px 15px 15px;
   }
 }
@@ -505,14 +496,14 @@ $bg-secondary: color(secondary, $colors-background);
 .details-title {
   padding: 0 8px;
 
-  @media (max-width: 767px) {
+  @include media('<sm') {
     font-size: 18px;
     margin: 0;
   }
 }
 
 .details-wrapper {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     position: relative;
     max-height: 140px;
     overflow: hidden;
@@ -526,7 +517,7 @@ $bg-secondary: color(secondary, $colors-background);
 }
 
 .details-overlay {
-  @media (max-width: 767px) {
+  @include media('<sm') {
     position: absolute;
     height: 75%;
     bottom: 0;

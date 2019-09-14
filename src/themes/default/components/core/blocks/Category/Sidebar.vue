@@ -133,6 +133,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~theme/css/variables/media-queries';
+
 .sidebar {
   &__header {
     justify-content: space-between;
@@ -141,7 +143,7 @@ export default {
     &__clear {
       font-size: .8em;
       min-width: 102px;
-      @media only screen and (min-width: 768px) and (max-width: 770px) {
+      @include media('o-screen', '>=sm', '<=770px') {
         margin-top: 20px;
       }
     }

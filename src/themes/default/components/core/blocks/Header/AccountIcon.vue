@@ -75,7 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~theme/css/base/global_vars';
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-icon-hover: color(secondary, $colors-background);
 
@@ -106,7 +106,7 @@ $color-icon-hover: color(secondary, $colors-background);
 
   }
 
-  @media (min-width: 768px) {
+  @include media('>=sm') {
     &:hover .dropdown-content:not(.dropdown-content__hidden),
     &:focus .dropdown-content:not(.dropdown-content__hidden) {
       display: block;

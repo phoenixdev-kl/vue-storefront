@@ -60,7 +60,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '~theme/css/base/global_vars';
+@import "~theme/css/variables/media-queries";
 $z-index-notification: map-get($z-index, notification);
+$modal-onboard-max-width: 600px;
 
 .modal-onboard {
   z-index: $z-index-notification + 1;
@@ -70,14 +72,14 @@ $z-index-notification: map-get($z-index, notification);
   min-height: 600px;
   overflow: hidden;
 
-  @media (max-width: 600px) {
+  @include media('<=#{$modal-onboard-max-width}') {
     display: block;
     padding: 40px 20px;
   }
 }
 
 .copy {
-  @media (min-width: 601px) {
+  @include media('>#{$modal-onboard-max-width}') {
     max-width: 62%;
     margin-left: 30%;
   }
@@ -87,7 +89,7 @@ $z-index-notification: map-get($z-index, notification);
   display: block;
   margin: auto;
 
-  @media (min-width: 601px) {
+  @include media('>#{$modal-onboard-max-width}') {
     position: absolute;
     width: 48%;
     top: 0;

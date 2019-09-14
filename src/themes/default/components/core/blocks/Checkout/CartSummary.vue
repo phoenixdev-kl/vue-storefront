@@ -64,9 +64,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .summary-title {
-    @media (max-width: 767px) {
-      margin-left: 0;
-    }
+@import '~theme/css/variables/media-queries';
+
+.summary-title {
+  @include media('<sm') {
+    margin-left: 0;
   }
+}
 </style>

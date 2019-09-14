@@ -66,7 +66,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "~theme/css/animations/transitions";
+@import "~theme/css/animations/transitions";
+@import '~theme/css/variables/media-queries';
 
   .slide-left-enter-active,
   .slide-left-leave-active,
@@ -105,20 +106,20 @@ export default {
     overflow-y: auto;
     z-index: 4;
 
-    @media (max-width: 767px) {
-      width: 100vh;
-    }
+  @include media('<sm') {
+    width: 100vh;
   }
+}
 
-  .close {
+.close {
+  i {
+    opacity: 0.6;
+  }
+  &:hover,
+  &:focus {
     i {
-      opacity: 0.6;
-    }
-    &:hover,
-    &:focus {
-      i {
-        opacity: 1;
-      }
+      opacity: 1;
     }
   }
+}
 </style>

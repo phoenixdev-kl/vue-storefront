@@ -113,11 +113,13 @@ $border-primary: color(primary, $colors-border);
 </style>
 
 <style lang="scss">
+@import '~theme/css/variables/media-queries';
+
 .static-content {
   h3 {
     margin-top: 40px;
     margin-bottom: 25px;
-    @media (max-width: 767px) {
+    @include media('<sm') {
       margin-top: 35px;
       margin-bottom: 10px;
     }

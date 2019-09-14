@@ -132,9 +132,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .new-collection {
-    @media (max-width: 767px) {
-      padding-top: 0;
-    }
+@import '~theme/css/variables/media-queries';
+
+.new-collection {
+  @include media('<sm') {
+    padding-top: 0;
   }
+}
 </style>

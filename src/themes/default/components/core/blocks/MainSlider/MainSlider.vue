@@ -65,12 +65,12 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-white: color(white);
 .main-slider {
 
-  @media (max-width: 767px) {
+  @include media('<sm') {
     display: none;
   }
 

@@ -223,93 +223,94 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
-  .blend {
-    flex: 0 0 150px;
+
+.blend {
+  flex: 0 0 150px;
+}
+
+.image {
+  mix-blend-mode: multiply;
+  vertical-align: top;
+  width: 150px;
+  @include media('<sm') {
+    width: 100px;
   }
+}
 
-  .image {
-    mix-blend-mode: multiply;
-    vertical-align: top;
-    width: 150px;
-    @media (max-width: 767px) {
-      width: 100px;
-    }
-  }
+.details {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
 
-  .details {
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  .name {
-    @media (max-width: 767px) {
-      font-size: 14px;
-    }
-  }
-
-  .options, .sku {
-    @media (max-width: 767px) {
-      font-size: 10px;
-    }
-  }
-
-  .qty {
-    padding-right: 30px;
-
-    @media (max-width: 767px) {
-      font-size: 12px;
-    }
-  }
-
-  .actions {
-    margin: 0 -5px;
-  }
-
-  .prices {
-    flex-direction: column;
-    @media (max-width: 767px) {
-      padding: 0;
-      font-size: 12px;
-    }
-  }
-
-  .price-special {
-    @media (max-width: 767px) {
-      font-size: 14px;
-    }
-  }
-
-  .price-original {
-    text-decoration: line-through;
-  }
-
-  input {
-    width: 30px;
-  }
-
-  .flex-nowrap {
-    flex-wrap: nowrap;
-  }
-
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-
-  .edit-mode {
-    border-bottom: 1px solid color(white-smoke);
-  }
-
-  .filters {
-    flex: 1 1 200px;
-  }
-
-  .update-button {
+.name {
+  @include media('<sm') {
     font-size: 14px;
-    min-width: 150px;
-    width: 150px;
-    padding: 10px;
   }
+}
+
+.options, .sku {
+  @include media('<sm') {
+    font-size: 10px;
+  }
+}
+
+.qty {
+  padding-right: 30px;
+
+  @include media('<sm') {
+    font-size: 12px;
+  }
+}
+
+.actions {
+  margin: 0 -5px;
+}
+
+.prices {
+  flex-direction: column;
+  @include media('<sm') {
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
+.price-special {
+  @include media('<sm') {
+    font-size: 14px;
+  }
+}
+
+.price-original {
+  text-decoration: line-through;
+}
+
+input {
+  width: 30px;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.edit-mode {
+  border-bottom: 1px solid color(white-smoke);
+}
+
+.filters {
+  flex: 1 1 200px;
+}
+
+.update-button {
+  font-size: 14px;
+  min-width: 150px;
+  width: 150px;
+  padding: 10px;
+}
 </style>

@@ -65,7 +65,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 
 .base-input-number {
@@ -75,7 +75,7 @@ export default {
     width: 50px;
     height: 1.4rem;
     line-height: 1.7rem;
-    @media (min-width: 768px) {
+    @include media('>=sm') {
       height: 1.7rem;
     }
   }
@@ -83,7 +83,7 @@ export default {
   &__label {
     font-size: 0.8rem;
     line-height: 1.2rem;
-    @media (min-width: 768px) {
+    @include media('>=sm') {
       font-size: 1rem;
       line-height: 1.4rem;
     }

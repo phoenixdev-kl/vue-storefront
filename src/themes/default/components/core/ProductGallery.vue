@@ -84,6 +84,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~theme/css/variables/media-queries';
+
 .media-gallery {
   text-align: center;
   width: 100%;
@@ -92,7 +94,7 @@ export default {
   align-items: center;
   min-height: calc(90vw * 1.1);
 
-  @media only screen and (min-width:768px) {
+  @include media('o-screen', '>=sm') {
     min-height: inherit;
   }
 

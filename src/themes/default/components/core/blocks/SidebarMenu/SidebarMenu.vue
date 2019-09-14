@@ -234,7 +234,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~theme/css/animations/transitions";
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $bg-secondary: color(secondary, $colors-background);
 $color-gainsboro: color(gainsboro);
@@ -246,7 +246,7 @@ $color-mine-shaft: color(mine-shaft);
   width: 350px;
   overflow: hidden;
 
-  @media (max-width: 767px) {
+  @include media('<sm') {
     width: 100vh;
   }
 

@@ -97,7 +97,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $mine-shaft: color(mine-shaft);
 $white: color(white);
@@ -117,11 +117,11 @@ $white: color(white);
       color: $white;
     }
   }
-  @media (max-width: 767px) {
+  @include media('<sm') {
     margin: 0;
   }
   a, span {
-    @media (max-width: 767px) {
+    @include media('<sm') {
       padding: 10px 12px;
       font-size: 16px;
     }

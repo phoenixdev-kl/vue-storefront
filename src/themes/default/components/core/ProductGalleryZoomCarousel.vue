@@ -126,6 +126,8 @@ export default {
 <style lang="scss" scoped>
 @import '~theme/css/base/global_vars';
 @import '~theme/css/animations/transitions';
+@import '~theme/css/variables/media-queries';
+
 .media-zoom-carousel {
   * {
     box-sizing: border-box;
@@ -144,7 +146,7 @@ export default {
     max-height: 100%;
     justify-content: space-evenly;
 
-    @media (max-width: 767px){
+    @include media('<sm') {
       top: 50%;
       bottom: auto;
       height: auto;
@@ -165,7 +167,7 @@ export default {
       display: none;
     }
 
-    @media (max-width: 767px) {
+    @include media('<sm') {
       display: none;
     }
   }
@@ -194,7 +196,7 @@ export default {
     max-width: 600px;
     height: 100%;
     flex: 1;
-    @media (max-width: 767px) {
+    @include media('<sm') {
       height: auto;
     }
   }

@@ -18,7 +18,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@include media('o-screen', '>=sm') {
   .container {
     width: 752px;
     max-width: 100%;
@@ -32,7 +32,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@include media('o-screen', '>=lg') {
   .container {
     width: 1184px;
     max-width: 100%;
@@ -489,7 +489,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@include media('o-screen', '>=sm') {
   .col-md,
   .col-md-1,
   .col-md-2,
@@ -955,7 +955,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@include media('o-screen', '>=lg') {
   .col-xl,
   .col-xl-1,
   .col-xl-2,
@@ -1200,7 +1200,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@include media('o-screen', '>=sm', '<md') {
   .hidden-md {
     display: none;
   }
@@ -1212,7 +1212,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@include media('o-screen', '>=lg') {
   .hidden-xl {
     display: none;
   }

@@ -273,7 +273,7 @@ export default {
     }
 
     .product-listing {
-      justify-content: center;;
+    justify-content: center;
     }
 
     .mobile-filters {

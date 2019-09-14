@@ -42,9 +42,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~theme/css/variables/media-queries';
+
 .head-image {
   display: none;
-  @media (min-width: 767px) {
+  @include media('>=sm') {
     display: inherit;
   }
 

@@ -152,26 +152,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-error: color(error);
 $white: color(white);
-  .modal-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-close{
+  cursor: pointer;
+}
+.modal-content {
+  @include media('>=xs') {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .modal-close{
-    cursor: pointer;
-  }
-  .modal-content {
-    @media (max-width: 400px) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  .redirect-error {
-    background-color: $color-error;
-    color: $white;
-  }
+}
+.redirect-error {
+  background-color: $color-error;
+  color: $white;
+}
 </style>

@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-product-bg: color(secondary, $colors-background);
 
@@ -98,7 +98,7 @@ $color-product-bg: color(secondary, $colors-background);
         width: calc((100vw - (560px - 30px)) / 2);
       }
 
-      @media only screen and (min-width: 768px) {
+      @include media('o-screen', '>=sm') {
         width: calc((100vw - (752px - 30px)) / 2);
       }
 
@@ -106,7 +106,7 @@ $color-product-bg: color(secondary, $colors-background);
         width: calc((100vw - (976px - 30px)) / 2);
       }
 
-      @media only screen and (min-width: 1200px) {
+      @include media('o-screen', '>=lg') {
         width: calc((100vw - (1184px - 30px)) / 2);
       }
     }

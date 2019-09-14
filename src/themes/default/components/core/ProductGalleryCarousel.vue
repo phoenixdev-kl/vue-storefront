@@ -174,12 +174,14 @@ export default {
 </style>
 
 <style lang="scss">
+@import '~theme/css/variables/media-queries';
+
 .media-gallery-carousel,
 .media-zoom-carousel {
   .VueCarousel-pagination {
     position: absolute;
     bottom: 15px;
-    @media (max-width: 767px) {
+    @include media('<sm') {
       display: none;
     }
   }

@@ -179,7 +179,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-tertiary: color(tertiary);
 $color-white-smoke: color(white-smoke);
@@ -188,7 +188,7 @@ table {
   border-collapse: collapse;
   width: 100%;
 
-  @media (max-width: 767px) {
+  @include media('<sm') {
     border-top: none;
   }
 
@@ -199,20 +199,20 @@ table {
     &.align-right {
       text-align: right;
 
-      @media (max-width: 767px) {
+      @include media('<sm') {
         text-align: left;
       }
 
     }
 
-    @media (max-width: 1199px) {
+    @include media('<lg') {
       padding: 10px;
     }
 
   }
 
   thead {
-    @media (max-width: 767px) {
+    @include media('<sm') {
       display: none;
     }
   }
@@ -220,7 +220,7 @@ table {
   tbody {
 
     tr {
-      @media (max-width: 767px) {
+      @include media('<sm') {
         display: block
       }
 
@@ -233,7 +233,7 @@ table {
     }
 
     td {
-      @media (max-width: 767px) {
+      @include media('<sm') {
         display: block;
         text-align: left;
         padding: 10px 20px;
@@ -244,13 +244,13 @@ table {
       }
 
       &:first-child {
-        @media (max-width: 767px) {
+        @include media('<sm') {
           padding: 20px 20px 10px 20px;
         }
       }
 
       &:last-child {
-        @media (max-width: 767px) {
+        @include media('<sm') {
           padding: 10px 20px 20px 20px;
         }
       }
@@ -261,7 +261,7 @@ table {
   tfoot {
 
     tr {
-      @media (max-width: 767px) {
+      @include media('<sm') {
         display: block
       }
 
@@ -274,19 +274,19 @@ table {
     }
 
     td {
-      @media (max-width: 767px) {
+      @include media('<sm') {
         display: block
       }
 
       &:first-child {
-        @media (max-width: 767px) {
+        @include media('<sm') {
           font-weight: 700;
           padding: 20px 20px 5px 20px;
         }
       }
 
       &:last-child {
-        @media (max-width: 767px) {
+        @include media('<sm') {
           padding: 5px 20px 0 20px;
         }
       }

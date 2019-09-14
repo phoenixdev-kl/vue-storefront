@@ -121,7 +121,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '~theme/css/base/global_vars';
+@import '~theme/css/variables/media-queries';
 $z-index-modal: map-get($z-index, modal);
+$modal-max-width: 600px;
 
 .modal {
   position: fixed;
@@ -143,7 +145,7 @@ $z-index-modal: map-get($z-index, modal);
     max-height: 100%;
     z-index: $z-index-modal+1;
 
-    @media (max-width: 600px) {
+    @include media('<=#{$modal-max-width}') {
       min-height: 100%;
       min-width: 100%;
       margin: 0;
@@ -157,13 +159,13 @@ $z-index-modal: map-get($z-index, modal);
         margin: 0;
     }
 
-    @media (max-width: 600px) {
+    @include media('<=#{$modal-max-width}') {
       padding: 25px 20px;
     }
   }
 
   .modal-content {
-    @media (max-width: 600px) {
+    @include media('<=#{$modal-max-width}') {
       padding: 30px 20px;
     }
   }

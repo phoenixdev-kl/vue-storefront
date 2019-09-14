@@ -263,12 +263,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~theme/css/variables/media-queries';
+
 .link {
   text-decoration: underline;
 }
 
 .login-prompt {
-  @media (min-width: 1200px) {
+  @include media('>=lg') {
     margin-top: 30px;
   }
 }

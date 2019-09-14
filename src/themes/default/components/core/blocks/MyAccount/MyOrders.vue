@@ -89,7 +89,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~theme/css/base/global_vars';
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 $color-icon-hover: color(secondary, $colors-background);
 
@@ -101,17 +101,17 @@ table {
     text-align: left;
     padding: 20px;
 
-    @media (max-width: 1199px) {
+    @include media('<lg') {
       padding: 10px;
     }
 
-    @media (max-width: 767px) {
+    @include media('<sm') {
       text-align: center;
     }
 
     &.hide-on-xs {
 
-      @media (max-width: 767px) {
+      @include media('<sm') {
         display: none;
       }
 
@@ -130,7 +130,7 @@ table {
   margin: -20px;
   padding: 20px;
 
-  @media (max-width: 1199px) {
+  @include media('<lg') {
     margin: -10px;
     padding: 10px;
   }

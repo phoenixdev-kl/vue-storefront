@@ -54,20 +54,22 @@ export default {
 }
 </script>
 
-<style scoped>
-  @media (min-width: 767px) and (max-width: 1200px){
-    .button-outline{
-      min-width: 100%;
-    }
+<style lang="scss" scoped>
+@import '~theme/css/variables/media-queries';
+
+@include media('>=sm', '<lg') {
+  .button-outline {
+    min-width: 100%;
   }
-  @media (max-width: 767px) {
-    .h3 {
-      font-size: 18px;
-      text-align: center;
-    }
-    .newsletter-button {
-      padding-top: 25px;
-      text-align: center;
-    }
+}
+@include media('<sm') {
+  .h3 {
+    font-size: 18px;
+    text-align: center;
   }
+  .newsletter-button {
+    padding-top: 25px;
+    text-align: center;
+  }
+}
 </style>
