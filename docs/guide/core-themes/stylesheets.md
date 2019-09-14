@@ -1,6 +1,6 @@
-# Working with stylesheets in the 'default' theme
+# Working with Stylesheets in the 'default' Theme
 
-The default theme’s CSS is designed to be easily maintainable, which implies the smallest possible files footprint. We are using flexbox and reusable atomic classes to prevent CSS files’ rapid growth. We're trying to avoid nesting CSS classes (maximum nesting level is 1) to make them easier to understand and debug.
+The `default` theme's CSS is designed to be easily maintainable, which implies the smallest possible files footprint. We are using flexbox and reusable atomic classes to prevent CSS files' rapid growth. We're trying to avoid nesting CSS classes (maximum nesting level is 1) to make them easier to understand and debug.
 
 All (S)CSS files should be placed in the `src/themes/{theme_name}/css` folder.
 
@@ -14,7 +14,7 @@ In your own themes other than `default` you don't need to follow our technology 
 2. [Flexbox Grid](http://flexboxgrid.com/) for layout.
 3. Atomic CSS convention for all repeatable CSS properties - margins, paddings, colors, text properties and borders. ([see some nice introduction to Atomic CSS](https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set/)).
 
-## How to style UI elements in Vue Storefront
+## How to Style UI Elements in Vue Storefront
 
 Let's say we have a small piece of UI and want to style it according to mocks provided by our graphic designer.
 
@@ -46,13 +46,13 @@ Now our finished piece of UI should look like this:
 
 ```html
 <style scoped>
-  .cool-item {
-    display: inline-flex;
-  }
+.cool-item {
+  display: inline-flex;
+}
 </style>
 ```
 
-## Extending (S)CSS files
+## Extending (S)CSS Files
 
 If you can't find a CSS rule that you need, please read the rules below before extending current stylesheets:
 
