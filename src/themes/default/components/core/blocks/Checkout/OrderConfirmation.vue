@@ -230,7 +230,7 @@ table {
   text-align: center;
   margin-bottom: 30px;
 
-  @media only screen and (min-width: 576px) {
+  @include media('o-screen', '>=xs') {
     text-align: left;
     margin-bottom: 0;
   }

@@ -101,7 +101,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~theme/css/variables/colors';
+@import '~theme/css/variables/variables';
 @import '~theme/css/helpers/functions/color';
 
 $color-white: color(white);
@@ -112,8 +112,6 @@ $products-column-width-mobile: 140px;
 $products-column-width: 280px;
 $features-column-width-mobile: 110px;
 $features-column-width: 210px;
-
-$screen-l: 1170px;
 
 *,
 *::after,
@@ -135,7 +133,7 @@ $screen-l: 1170px;
     padding: 0;
     display: flex;
 
-    @media (min-width: $screen-l) {
+    @include media('>=lg') {
       margin-left: $features-column-width;
     }
   }
@@ -157,7 +155,7 @@ $screen-l: 1170px;
     background-color: mix(#000, $color-white, 2%);
     opacity: 0.95;
 
-    @media (min-width: $screen-l) {
+    @include media('>=lg') {
       width: $features-column-width;
     }
   }
@@ -170,7 +168,7 @@ $screen-l: 1170px;
     text-align: center;
     transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
 
-    @media (min-width: $screen-l) {
+    @include media('>=lg') {
       width: $products-column-width;
     }
   }
@@ -182,7 +180,7 @@ $screen-l: 1170px;
     padding: 15px 5px;
     text-align: left;
 
-    @media (min-width: $screen-l) {
+    @include media('>=lg') {
       padding: 25px 10px;
       line-height: 16px;
       font-size: 0.7rem;
@@ -202,7 +200,7 @@ $screen-l: 1170px;
     background: $color-product-bg;
     overflow: hidden;
 
-    @media (min-width: $screen-l) {
+    @include media('>=lg') {
       height: 385px;
       width: $products-column-width;
     }
@@ -213,7 +211,7 @@ $screen-l: 1170px;
       cursor: auto;
       background: mix(#000, $color-white, 2%);
 
-      @media (min-width: $screen-l) {
+      @include media('>=lg') {
         width: $features-column-width;
       }
     }

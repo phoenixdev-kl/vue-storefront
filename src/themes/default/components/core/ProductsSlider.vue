@@ -93,21 +93,22 @@ $color-product-bg: color(secondary, $colors-background);
       top: 0;
       z-index: 1;
       display: none;
-      @media only screen and (min-width: 576px) {
+
+      @include media('o-screen', '>=xs') {
         display: block;
-        width: calc((100vw - (560px - 30px)) / 2);
+        width: calc((100vw - (#{map-get($breakpoints, 'xs') - $grid-flexbox-gutter-width} - 30px)) / 2);
       }
 
       @include media('o-screen', '>=sm') {
-        width: calc((100vw - (752px - 30px)) / 2);
+        width: calc((100vw - (#{map-get($breakpoints, 'sm') - $grid-flexbox-gutter-width} - 30px)) / 2);
       }
 
-      @media only screen and (min-width: 992px) {
-        width: calc((100vw - (976px - 30px)) / 2);
+      @include media('o-screen', '>=md') {
+        width: calc((100vw - (#{map-get($breakpoints, 'md') - $grid-flexbox-gutter-width} - 30px)) / 2);
       }
 
       @include media('o-screen', '>=lg') {
-        width: calc((100vw - (1184px - 30px)) / 2);
+        width: calc((100vw - (#{map-get($breakpoints, 'lg') - $grid-flexbox-gutter-width} - 30px)) / 2);
       }
     }
     &:before {

@@ -77,7 +77,7 @@ export default {
             cursor: pointer;
         }
     }
-    @media (max-width: 770px) {
+    @include media('>=sm') {
       .sort-by {
         width: 100%;
       }

@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~theme/css/variables/colors";
+@import "~theme/css/variables/variables";
 @import "~theme/css/helpers/functions/color";
 $dark-border: color(secondary);
 $white: color(white);
@@ -54,12 +54,13 @@ $black: color(black);
   height: 62px;
 }
 
-@media screen and (min-width: 900px) {
+@include media('>=md') {
   .button-outline {
     border: 2px solid;
     min-width: 220px;
   }
 }
+
 .dark {
   border: 1px solid $dark-border;
   &:hover,
@@ -69,6 +70,7 @@ $black: color(black);
     border-color: $black;
   }
 }
+
 .light {
   &:hover,
   &:focus {

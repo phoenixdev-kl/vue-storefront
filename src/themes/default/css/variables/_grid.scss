@@ -26,3 +26,5 @@ $grid-gutter-widths: (
   'md': 30px,
   'lg': 30px
 ) !default;
+$grid-flexbox-gutter-width: 16px;
+$grid-flexbox-padding-width: ($grid-flexbox-gutter-width / 2);
