@@ -149,8 +149,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~theme/css/animations/transitions";
-@import "~theme/css/variables/grid";
-@import "~theme/css/variables/typography";
+@import "~theme/css/variables/variables";
 
 .searchpanel {
   height: 100vh;
@@ -170,7 +169,7 @@ export default {
     padding-left: 40px;
     padding-right: 40px;
 
-    @media #{$media-xs} {
+    @include media('o-screen', '<sm') {
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -180,7 +179,7 @@ export default {
     margin-left: - map-get($grid-gutter-widths, lg) / 2;
     margin-right: - map-get($grid-gutter-widths, lg) / 2;
 
-    @media #{$media-xs} {
+    @include media('o-screen', '<sm') {
       margin-right: - map-get($grid-gutter-widths, xs) / 2;
       margin-left: - map-get($grid-gutter-widths, xs) / 2;
     }
@@ -190,7 +189,7 @@ export default {
     padding-left: map-get($grid-gutter-widths, lg) / 2;
     padding-right: map-get($grid-gutter-widths, lg) / 2;
 
-    @media #{$media-xs} {
+    @include media('o-screen', '<sm') {
       padding-left: map-get($grid-gutter-widths, xs) / 2;
       padding-right: map-get($grid-gutter-widths, xs) / 2;
     }
@@ -206,7 +205,7 @@ export default {
     padding-left: map-get($grid-gutter-widths, lg) / 2;
     padding-right: map-get($grid-gutter-widths, lg) / 2;
 
-    @media #{$media-xs} {
+    @include media('o-screen', '<sm') {
       width: 50%;
       padding-left: map-get($grid-gutter-widths, xs) / 2;
       padding-right: map-get($grid-gutter-widths, xs) / 2;
@@ -240,7 +239,7 @@ export default {
     font-size: 18px;
     font-family: map-get($font-families, secondary);
 
-    @media #{$media-xs} {
+    @include media('o-screen', '<sm') {
       font-size: 16px;
     }
   }
@@ -263,7 +262,7 @@ export default {
   }
 
   button {
-    @media #{$media-xs} {
+    @include media('o-screen', '<sm') {
       width: 100%;
       margin-bottom: 15px;
     }
