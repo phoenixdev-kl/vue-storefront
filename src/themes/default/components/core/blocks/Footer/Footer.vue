@@ -7,9 +7,7 @@
     >
       <div class="container">
         <div class="row m0 center-xs between-md">
-          <div
-            class="row m0 col-lg-7 col-md-8 col-xs-12 start-md between-md between-xs no-mobile"
-          >
+          <div class="row m0 col-lg-7 col-md-8 col-xs-12 start-sm between-sm no-mobile">
             <div class="start-md">
               <h3 class="cl-accent weight-400">
                 {{ $t('Orders') }}
@@ -240,21 +238,8 @@ $color-secondary: color(secondary);
     }
   }
 }
-.legal-entity-link {
-  text-align: center;
-  @include media('>=sm') {
-    display: none;
-  }
-}
 
-.privacy-policy-link {
-  text-align: right;
-  @include media('>=sm') {
-    display: none;
-  }
-}
-
-@media (max-width: 595px) {
+@include media('<xs') {
   .no-mobile {
     display: none;
   }
