@@ -52,47 +52,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~theme/css/variables/colors";
-$break-large: 1030px;
+  @import "~theme/css/variables/variables";
 
-.categories {
-  &__heading {
-    width: 100%;
-  }
-
-  &__handler {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__button {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    border: 2px solid #333;
-    transition: all 0.2s ease;
-
-    &--active {
-      background: #333;
-      color: #fff;
+  .categories {
+    &__heading {
+      width: 100%;
     }
 
-    &--active {
-      text-decoration: underline;
+    &__handler {
+      display: flex;
+      flex-wrap: wrap;
     }
-    @media screen and (min-width: $break-large) {
-      &:hover{
+
+    &__button {
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      border: 2px solid #333;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &--active {
         background: #333;
         color: #fff;
       }
+
+      &--active {
+        text-decoration: underline;
+      }
+
+      @include media('touch') {
+        &:not(.categories__button--active):hover {
+          background: transparent;
+          color: initial;
+        }
+      }
     }
-  }
 
-  &__button-text {
-    display: block;
-    margin-right: 15px;
-  }
+    &__button-text {
+      display: block;
+      margin-right: 15px;
+    }
 
-}
+  }
 </style>
